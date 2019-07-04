@@ -1,0 +1,33 @@
+.testing {
+  width: 71.42857%; }
+
+body {
+  background: red; 
+}
+
+
+a {
+  font-style: white;
+}
+
+.header img {
+  width: 100%;
+}
+
+.logo-title {
+  display: flex;
+  h1 {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  .card {
+    margin: 20px;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  max-width: 100%;
+}

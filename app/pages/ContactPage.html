@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Index page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="logo-title">
+
+        <img src="../images/150px-BCIT_logo.jpg" alt="">
+
+        <h1>BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY</h1>
+
+    </div>
+
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav"> -->
+
+
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="text-light " href="../index.html">Home</a>
+            <a class="text-light" href="./SchedulePage.html">Schedule</a>
+            <a class="text-light" href="./StudentsPage.html">Students</a>
+            <a class="text-light" href="./StaffPage.html">Staff</a>
+            <a class="text-light" href="./E-ResourcesPage.html">E-Resources</a>
+            <a class="text-light" href="./ProgramOverviewPage.html">Program Overview</a>
+            <a class="text-light" href="./CourseSummaryPage.html">Individual Courses Summary</a>
+            <a class="text-light" href="./ContactPage.html">Contact</a>
+        </nav>
+
+<!-- </div> -->
+
+    <div class="header mx-auto" style="width: 300px;">
+    </div>
+
+
+    <div class="container">
+      <br>
+        <div class="mx-auto form-group" style="width: 300px;">
+                <h1>Contact Us!</h1>
+
+        </div>
+        <div>
+
+            <form class="needs-validation" novalidate>
+                    <div class="row form-group">
+                            <div class="col">
+                                    <label for="validationCustom02">First name</label>
+                                    <input type="text" class="form-control" id="validationCustom02" placeholder="First name" required>
+                                    <div class="valid-feedback">
+                                      Looks good!
+                                    </div>
+                                </div>
+                                <div class="col">
+                                        <label for="validationCustom02">Last name</label>
+                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                            <label for="validationCustom02">Telephone</label>
+                                            <input type="number" class="form-control" id="validationCustom02" placeholder="Telephone" required>
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                        </div>
+
+                        </div>
+
+                        <div class="radio">
+                                <label><input type="radio" name="optradio" checked>Current Student</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="optradio">Prospective Student</label>
+                              </div>
+                              <div class="radio disabled">
+                                <label><input type="radio" name="optradio">Instructor</label>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Please write your questions here and we will answer within 5 business days</label>
+                                <textarea class="form-control" id="validationCustom03" rows=3 required></textarea>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                              </div>
+
+                        <div class="form-group">
+                            <a href="#">Terms & Conditions</a>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                            </div>
+                        </div>
+                      
+
+                      <label for="exampleFormControlInput1">Email address</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="name@example.com"required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Select which course you are interested in</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>computing & information technology</option>
+                        <option>trades & apprenticeship</option>
+                        <option>applied & natural sciences</option>
+                        <option>business & media</option>
+                        <option>engineering</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect2">Why are you contacting us?</label>
+                      <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <option>More information about a specific program</option>
+                        <option>Tuition and financial Aid Assistance</option>
+                        <option>General Inquiries</option>
+                        <option>Admission requirments</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+
+                        
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </div>
+
+                  </form>
+
+                  
+<script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+
+        
+</script>
+        
+
+    </div>
+</div>
+
+<!-- Footer -->
+
+<div class="bg-dark text-light">
+<footer class="page-footer font-small blue pt-4">
+
+    <div class="container">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+    
+          <!-- Grid row -->
+          <div class="row">
+    
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+    
+              <!-- Content -->
+              <h5 class="text-uppercase">BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY</h5>
+              <p>
+                    3700 Willingdon Avenue<br/>
+                    Burnaby, British Columbia<br/>
+                    Canada, V5G 3H2<br/>
+                    Telephone: 604-434-5734<br/>
+                    Toll-free (Can/US): 1-866-434-1610<br/>
+                </p>
+    
+            </div>
+            <!-- Grid column -->
+    
+            <hr class="clearfix w-100 d-md-none pb-3">
+    
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+    
+                <!-- Links -->
+                <h5 class="text-uppercase">About BCIT</h5>
+    
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!" class="text-light">Careers</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-light">About the Institute</a>
+                  </li>
+                  <li>
+                    <a href="#!"class="text-light">News</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-light">Events</a>
+                  </li>
+                </ul>
+    
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-3 mb-md-0 mb-3">
+    
+                <!-- Links -->
+                <h5 class="text-uppercase">Additional Information</h5>
+    
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!" class="text-light">Digital Privacy Statement</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-light">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-light">Website Feedback</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-light">Terms of Use</a>
+                  </li>
+                </ul>
+    
+              </div>
+              <!-- Grid column -->
+    
+          </div>
+          <!-- Grid row -->
+    
+        </div>
+        <!-- Footer Links -->
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+          <a href="#!" class="text-light"> Xi Chu & Michelle Sauder</a>
+        </div>
+        <!-- Copyright -->
+    </div>
+    
+      </footer>
+
+      <!-- Footer -->
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="../plugins/moment.min.js"></script>
+    <link rel="stylesheet" href="../styles/fullcalendar.css">
+<script src="../plugins/fullcalendar.js"></script>
+<script type="text/javascript" src="../data/events.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Index page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="logo-title">
+
+        <img src="../images/150px-BCIT_logo.jpg" alt="">
+
+        <h1>BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY</h1>
+
+    </div>
+
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav"> -->
+
+
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="text-light " href="../index.html">Home</a>
+            <a class="text-light" href="./SchedulePage.html">Schedule</a>
+            <a class="text-light" href="./StudentsPage.html">Students</a>
+            <a class="text-light" href="./StaffPage.html">Staff</a>
+            <a class="text-light" href="./E-ResourcesPage.html">E-Resources</a>
+            <a class="text-light" href="./ProgramOverviewPage.html">Program Overview</a>
+            <a class="text-light" href="./CourseSummaryPage.html">Individual Courses Summary</a>
+            <a class="text-light" href="./ContactPage.html">Contact</a>
+        </nav>
+
+<!-- </div> -->
+
+    <br>
+
+
+    <div class="container" id="container">
+    </div>
+    <br>
+    <script>
+      function formatDate(){
+      eventData.forEach(event => {
+        event.start = new Date(event.start);
+        // event.start.setDate(event.start.getDate()).toString();
+      })
+    }
+    formatDate()
+
+    var defualtview = "month";
+    $(window).on('load',function() {
+    // Optimalisation: Store the references outside the event handler:
+    var $window = $(window);
+
+    function checkWidth() {
+        var windowsize = $window[0].innerWidth;
+        btnMonth = document.getElementsByClassName("fc-month-button")[0];
+        btnList = document.getElementsByClassName("fc-listWeek-button")[0];
+        if (windowsize < 1032) {
+            //if the window is greater than 440px wide then turn on jScrollPane..
+            btnList.click();
+        }
+        else{
+          btnMonth.click();
+        }
+    }
+    // Execute on load
+    checkWidth();
+    // Bind event listener
+    $(window).resize(checkWidth);
+
+    
+});
+$('#container').fullCalendar({
+  header: {
+    left: 'prev,next today',
+    center: 'title',
+    right: 'month,listWeek'
+  },
+  timeZone: 'UTC',
+  defaultDate: '2018-09-10',
+  navLinks: true, // can click day/week names to navigate views
+  editable: true,
+  defaultView: defualtview,
+  eventLimit: true, // allow "more" link when too many events
+  events: eventData
+});
+    
+    </script>
+
+<!-- Footer -->
+
+<div class="bg-dark text-light">
+<footer class="page-footer font-small blue pt-4">
+
+    <div class="container">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+    
+          <!-- Grid row -->
+          <div class="row">
+    
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+    
+              <!-- Content -->
+              <h5 class="text-uppercase">BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY</h5>
+              <p>
+                    3700 Willingdon Avenue<br/>
+                    Burnaby, British Columbia<br/>
+                    Canada, V5G 3H2<br/>
+                    Telephone: 604-434-5734<br/>
+                    Toll-free (Can/US): 1-866-434-1610<br/>
+                </p>
+    
+            </div>
+            <!-- Grid column -->
+    
+            <hr class="clearfix w-100 d-md-none pb-3">
+    
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+    
+                <!-- Links -->
+                <h5 class="text-uppercase">About BCIT</h5>
+    
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!" class="text-light">Careers</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-light">About the Institute</a>
+                  </li>
+                  <li>
+                    <a href="#!"class="text-light">News</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-light">Events</a>
+                  </li>
+                </ul>
+    
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-3 mb-md-0 mb-3">
+    
+                <!-- Links -->
+                <h5 class="text-uppercase">Additional Information</h5>
+    
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!" class="text-light">Digital Privacy Statement</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-light">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-light">Website Feedback</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-light">Terms of Use</a>
+                  </li>
+                </ul>
+    
+              </div>
+              <!-- Grid column -->
+    
+          </div>
+          <!-- Grid row -->
+    
+        </div>
+        <!-- Footer Links -->
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+          <a href="#!" class="text-light"> Xi Chu & Michelle Sauder</a>
+        </div>
+        <!-- Copyright -->
+    </div>
+    
+      </footer>
+
+      <!-- Footer -->
+
+</div>
+
+
+</body>
+
+</html>
